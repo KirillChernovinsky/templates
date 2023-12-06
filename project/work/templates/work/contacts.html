@@ -1,0 +1,14 @@
+{% extends 'work/base.html' %}
+
+{% block title %} Contacts {% endblock %}
+
+
+{% block content %}
+{% for contact in contacts %}
+  <p>{{ contact.type }} : {{ contact.contact }} </p>
+{% endfor %}
+
+{% endblock %}
+
+
+

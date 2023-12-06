@@ -1,0 +1,45 @@
+
+{% extends 'shop/base.html' %}
+
+{% block title %} Home {% endblock %}
+
+
+{% block contact %}
+
+    <h1>Hello Alabuge</h1>
+    <p>Our products:</p>
+    <p>tomatoes, potatos, peoples, many mouse</p>
+    <h2>My phone is iphone</h2>
+    <p class="my phone description">oool</p>
+
+
+
+    <p>{{ header }}</p>
+            <p>{{ user.name }} знает {{ langs.2 }}</p>
+
+
+
+    {% for key,value in user.items %}
+        <p> {{ key }}: {{ value }}</p>
+    {% endfor %}
+
+
+
+    <h4>{% now 'j, F, y, P' %}</h4>
+
+    <p>{{ address }}</p>
+    <p>Он знает: </p>
+    {% for lang in langs%}
+        <p>{{ lang }}</p>
+    {% endfor %}
+    <p>Вот такая шляпа</p>
+    {% autoescape off %}
+        {{ text }}
+    {% endautoescape %}
+
+{% endblock %}
+
+
+
+
+
